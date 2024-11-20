@@ -1,0 +1,118 @@
+:root {
+  --bg-color: #f5f5f5;
+  --gray-300: #d1d5db;
+  --gray-500: #6b7280;
+  --gray-900: #111928;
+  --primary-300: #60a5fa;
+  --primary-700: #1a56db;
+  --primary-900: #1346b7;
+  --border-err: #fda29b;
+  --message-err: #f04438;
+  --message-success: #00aa4a;
+  --white: #ffffff;
+  --base-font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: var(--base-font-size);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--bg-color);
+}
+
+.signup-form {
+  width: 449px;
+  padding: 24px 28px;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.transition {
+  transition: all ease-in-out 0.2s;
+}
+
+.signup-form input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.signup-form input[type="email"]:hover {
+  border-color: var(--gray-500);
+}
+
+.signup-form input[type="email"]:focus {
+  border-color: var(--primary-700);
+  outline: none;
+  box-shadow: 0 0 0 4px var(--primary-300);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--gray-900) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--white) inset;
+  box-shadow: 0 0 0px 1000px var(--white) inset;
+}
+
+input:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+.signup-form .error-message {
+  color: var(--message-err);
+  margin-top: 8px;
+}
+
+.signup-form .success-message {
+  color: var(--message-success);
+  margin-top: 24px;
+}
+
+.signup-form input[type="email"].error {
+  border-color: var(--border-err);
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-700);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  margin-top: 24px;
+  cursor: pointer;
+  min-height: 41px;
+  box-sizing: border-box;
+}
+
+.signup-form button:hover {
+  background-color: var(--primary-900);
+}
+
+.signup-form button:focus {
+  background-color: var(--primary-900);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Junior FE - Passyah Raffi</title>
+  </head>
+  <body>
+    <form class="signup-form">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="enter your email address"
+        required
+        class="transition"
+      />
+      <div class="error-message transition" style="display: none;">
+        This email address already exists in our records
+      </div>
+      
+      <button class="transition" onclick="submitEmail()">Sign up</button>
+
+      <div class="success-message transition" style="display: none;">
+        Thank you! You have been added to our records.
+      </div>
+    </form>
+  </body>
+</html>
